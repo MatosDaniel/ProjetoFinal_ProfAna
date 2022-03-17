@@ -18,6 +18,7 @@
               Obrigada por me vires visitar e conhecer! Aproveita e descobre
               aquilo que faço e adoro!
             </h2>
+           <!-- ao clicar remete para uma descrição da pessoa mais a baixo na pagina --> 
             <a class="btn btn-primary" @click="goto('bora')">Bora lá!</a>
           </div>
         </div>
