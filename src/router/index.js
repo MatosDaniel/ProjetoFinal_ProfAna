@@ -1,11 +1,17 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import PaginaErro from '../views/PaginaErro.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/erro', //se meter o * a página fica em branco
+    name: 'erro',
+    component: PaginaErro
   },
   {
     path: '/SignUp',
