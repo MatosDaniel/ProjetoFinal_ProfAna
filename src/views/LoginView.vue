@@ -1,0 +1,91 @@
+<template>
+  <div class="Login">
+    <!-- Masthead-->
+    <header class="masthead">
+      <div
+        class="
+          container
+          px-4 px-lg-5
+          d-flex
+          h-100
+          align-items-center
+          justify-content-center
+        "
+      >
+        <div class="d-flex justify-content-center">
+          <div class="text-center">
+            <h1 class="mx-auto my-0 text-uppercase" style="font-size: 40pt">
+              Faça login!
+            </h1>
+            <form
+              onsubmit="loginRequest()"
+            >
+              <div class="login__field">
+                <p>
+                  <i class="login__icon fas fa-user"></i>
+                  <label for="email"></label>
+                  <input
+                    v-model="email"
+                    name="email"
+                    type="text"
+                    class="login__input"
+                    placeholder="Email"
+                    style="color: rgb(230, 230, 230)"
+                  />
+                </p>
+              </div>
+              <div class="login__field">
+                <p>
+                  <i class="login__icon fas fa-lock"></i>
+                  <input
+                    v-model="password"
+                    class="login__input"
+                    placeholder="Password"
+                    style="color: rgb(230, 230, 230)"
+                  />
+                </p>
+              </div>
+              <p>
+                <input
+                  class="btn btn-primary button"
+                  type="submit"
+                  value="Login"
+                />
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+</template>
+
+<script>
+import firebase from "firebase";
+export default {
+  name: "LoginAbout",
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    loginRequest() {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(
+          () => {
+            this.successMessage = "Login Successfully.";
+            this.$router.push('/');
+          },
+          (error) => {
+            let errorResponse = JSON.parse(error.message);
+            this.errorMessage = errorResponse.error.message;
+          }
+        );
+    },
+  },
+};
+</script>
