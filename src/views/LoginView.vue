@@ -25,7 +25,7 @@
                   <i class="login__icon fas fa-user"></i>
                   <label for="email"></label>
                   <input
-                    v-model="email"
+                    v-model="emailLogin"
                     name="email"
                     type="text"
                     class="login__input"
@@ -38,7 +38,7 @@
                 <p>
                   <i class="login__icon fas fa-lock"></i>
                   <input
-                    v-model="password"
+                    v-model="passwordLogin"
                     class="login__input"
                     placeholder="Password"
                     style="color: rgb(230, 230, 230)"
@@ -66,19 +66,19 @@ export default {
   name: "LoginAbout",
   data() {
     return {
-      email: "",
-      password: "",
+      emailLogin: "",
+      passwordLogin: "",
     };
   },
   methods: {
     loginRequest() {
       firebase
         .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
+        .signInWithEmailAndPassword(this.emailLogin, this.passwordLogin)
         .then(
           () => {
             this.successMessage = "Login Successfully.";
-            this.$router.push('/');
+            this.$router.push("home");
           },
           (error) => {
             let errorResponse = JSON.parse(error.message);
