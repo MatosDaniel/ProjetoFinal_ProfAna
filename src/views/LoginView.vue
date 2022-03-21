@@ -47,7 +47,7 @@
                   class="btn btn-primary button"
                   type="submit"
                   value="Login"
-                  @click="loginRequest()"
+                  @click="adminLogin()"
                 />
               </p>
           </div>
@@ -68,6 +68,15 @@ export default {
     };
   },
   methods: {
+    adminLogin() {
+      if(this.emailLogin == "admin@admin.pt" && this.passwordLogin == "superadmin")
+      {
+        this.$router.push("/admin");
+      }
+      else{
+        this.loginRequest();
+      }
+    },
     loginRequest() {
       firebase
         .auth()

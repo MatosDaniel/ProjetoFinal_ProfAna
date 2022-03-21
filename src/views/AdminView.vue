@@ -5,13 +5,14 @@
                         <h2 class="text-white-50 mx-auto mt-2 mb-5" style="font-size: 25pt;">Página do Administrador</h2>
                     </div>
                 </div>
-                <p class="text-white-50 minititles">1. Adicionar um novo conjunto foto/texto:</p>
+                <p class="text-white-50 minititles" style="margin-left:5%">Adicionar um novo conjunto foto/texto:</p>
                 <p class="text-white-50 addtext"> Insira o título da mensagem</p>
                 <input class="caixaTexto" type="text" name="texto" maxlength="300" size="100">
                 <p class="text-white-50 addtext" style="margin-top:2%"> Insira o texto que pretende que acompanhe a mensagem:</p>
-                <textarea rows="1" class="auto_height" oninput="auto_height(this)"></textarea>
+                <textarea rows="6" cols="100" style="margin-left:95px"></textarea>
                 <p class="text-white-50 addtext" style="margin-top:2%"> Insira a imagem que pretende que acompanhe a mensagem:</p>
                 <input class="caixaTexto" type="file" accept="image/png, image/jpeg" name="imagem" style="color:rgb(139, 139, 139)" > 
-                
+                <br>
+                <a class="btn btn-primary" style="margin-top:2%; margin-left: 43%"><router-link to="/" class="nav-link" style="color: white">Regressar ao início</router-link></a>
         </header>
 </template>
