@@ -17,9 +17,6 @@
             <h1 class="mx-auto my-0 text-uppercase" style="font-size: 40pt">
               Faça login!
             </h1>
-            <form
-              onsubmit="loginRequest()"
-            >
               <div class="login__field">
                 <p>
                   <i class="login__icon fas fa-user"></i>
@@ -50,9 +47,9 @@
                   class="btn btn-primary button"
                   type="submit"
                   value="Login"
+                  @click="loginRequest()"
                 />
               </p>
-            </form>
           </div>
         </div>
       </div>
@@ -78,7 +75,7 @@ export default {
         .then(
           () => {
             this.successMessage = "Login Successfully.";
-            this.$router.push("home");
+            this.$router.push("/");
           },
           (error) => {
             let errorResponse = JSON.parse(error.message);

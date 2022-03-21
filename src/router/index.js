@@ -10,7 +10,7 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/erro', //se meter o * a página fica em branco
+    path: '/:pathMatch(.*)*',
     name: 'erro',
     component: PaginaErro
   },
