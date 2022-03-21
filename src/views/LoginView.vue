@@ -41,6 +41,7 @@
                     style="color: rgb(230, 230, 230)"
                   />
                 </p>
+                <p v-if="erro == true" style="color:red">Os dados inseridos estão incorrectos </p>
               </div>
               <p>
                 <input
@@ -65,6 +66,7 @@ export default {
     return {
       emailLogin: "",
       passwordLogin: "",
+      erro: false,
     };
   },
   methods: {
@@ -89,6 +91,7 @@ export default {
           (error) => {
             let errorResponse = JSON.parse(error.message);
             this.errorMessage = errorResponse.error.message;
+            this.erro = true;
           }
         );
     },

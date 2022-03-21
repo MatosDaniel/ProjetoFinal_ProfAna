@@ -20,6 +20,7 @@
                                 <i class="login__icon fas fa-lock"></i>
                                 <input v-model="passwordRe" type="password" class="login__input" placeholder="Confirmar Password" style="color: rgb(230, 230, 230)">
                             </div>
+                            <p v-if="erro == true" style="color:red">Os dados inseridos estão incorrectos. <br> Nota: a Password necessita de  pelo menos 6 digitos </p>
                             <h2 class="text-white-50 mx-auto mt-2 mb-5">Ao clicares em registar estás a aceitar todos os Termos de Serviço</h2>
                             <input class="btn btn-primary button" type="submit" value="Registar" @click="registar()">
                         </div>
@@ -40,6 +41,7 @@ export default {
       email: "",
       password: "",
       passwordRe: "",
+      erro: false,
     };
   },
 
@@ -60,6 +62,7 @@ export default {
           var errorMessage = error.message;
           console.log(errorCode);
           console.log(errorMessage);
+          this.erro = true;
           // ..
         });
     },
