@@ -18,7 +18,7 @@
               Obrigada por me vires visitar e conhecer! Aproveita e descobre
               aquilo que faço e adoro!
             </h2>
-           <!-- ao clicar remete para uma descrição da pessoa mais a baixo na pagina --> 
+            <!-- ao clicar remete para uma descrição da pessoa mais a baixo na pagina -->
             <a class="btn btn-primary" @click="goto('bora')">Bora lá!</a>
           </div>
         </div>
@@ -187,6 +187,7 @@
         </div>
       </div>
     </section>
+    <!-- Admin -->
     <!-- Signup-->
     <section class="signup-section" id="signup">
       <div class="container px-4 px-lg-5">
@@ -269,7 +270,24 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
+  name: "get-request-async-await",
+  data() {
+    return {
+      titulo: null,
+      texto: null,
+    };
+  },
+  async created() {
+    const response = await axios.get(
+      "https://projeto1-63fcc-default-rtdb.firebaseio.com/.json"
+    );
+    this.titulo = response.data;
+    this.texto = response.data
+  },
+
   el: "#app",
   methods: {
     goto(refName) {

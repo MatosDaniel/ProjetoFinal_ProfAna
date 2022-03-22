@@ -87,13 +87,13 @@ export default {
           () => {
             this.successMessage = "Login Successfully.";
             this.$router.push("/");
-          },
+        })
+        .catch(
           (error) => {
+            this.erro = true;
             let errorResponse = JSON.parse(error.message);
             this.errorMessage = errorResponse.error.message;
-            this.erro = true;
-          }
-        );
+        });
     },
   },
 };
