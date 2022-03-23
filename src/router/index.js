@@ -2,12 +2,18 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import PaginaErro from '../views/PaginaErro.vue'
 import AdminPage from '../views/AdminView.vue'
+import Reviews from '../views/ComentariosView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/reviews',
+    name: 'reviews',
+    component: Reviews
   },
   {
     path: '/:pathMatch(.*)*',

@@ -11811,3 +11811,8 @@ body {
 .auto_height { /* CSS */
   width: 100%;
 }
+
+.comentarios{
+  background-color: #000;
+  margin-bottom: 0%;
+}

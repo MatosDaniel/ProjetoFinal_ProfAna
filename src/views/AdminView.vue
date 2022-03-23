@@ -8,7 +8,7 @@
       </div>
     </div>
     <p class="text-white-50 minititles" style="margin-left: 5%">
-      Adicionar um novo conjunto foto/texto:
+      Adicionar um novo comentário:
     </p>
     <p class="text-white-50 addtext">Insira o título da mensagem</p>
     <input
@@ -33,10 +33,10 @@
     </p>
     <input
       class="caixaTexto"
-      type="file"
-      accept="image/png, image/jpeg"
-      name="imagem"
+      type="date"
+      name="data"
       style="color: rgb(139, 139, 139)"
+      v-model="data"
     />
     <br>
     <a class="btn btn-primary" style="margin-top: 2%; margin-left: 5%" @click="guardar()">
@@ -58,6 +58,7 @@ export default {
     return {
       titulo: "",
       texto: "",
+      data: "",
     };
   },
   methods: {
@@ -66,11 +67,13 @@ export default {
         .post("https://projeto1-63fcc-default-rtdb.firebaseio.com/.json", {
           titulo: this.titulo,
           texto: this.texto,
+          data: this.data,
         })
         .then(
           (response) => (
             (this.articleId = response.data.id),
-            console.log("res " + this.articleId)
+            console.log("res " + this.articleId),
+            window.location.reload()
           )
         );
     },

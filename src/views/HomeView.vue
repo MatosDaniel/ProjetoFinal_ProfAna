@@ -276,16 +276,14 @@ export default {
   name: "get-request-async-await",
   data() {
     return {
-      titulo: null,
-      texto: null,
+      comentarios: null,
     };
   },
   async created() {
     const response = await axios.get(
       "https://projeto1-63fcc-default-rtdb.firebaseio.com/.json"
     );
-    this.titulo = response.data;
-    this.texto = response.data
+    this.comentarios = response.data;
   },
 
   el: "#app",

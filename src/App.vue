@@ -16,7 +16,6 @@
             </div>
         </nav>
   <router-view/>
-<!-- Contact-->
               <section class="contact-section bg-black" v-if="!['erro', 'adminPage'].includes($route.name)">
                   <div class="container px-4 px-lg-5">
                       <div class="row gx-4 gx-lg-5">
