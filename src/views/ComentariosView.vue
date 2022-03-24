@@ -15,7 +15,9 @@
                     <div class="titulo-comentario"> {{item.titulo}}</div>
                     <div class="texto-comentario"> {{item.texto}}</div>
                     <div class="data-comentario"> {{item.data}}</div>
-                    <div> --------------------------------------</div>
+                    <div>___________________________________________</div>
+                    <br>
+                    <br>
                 </div>
         </section>
     </body>

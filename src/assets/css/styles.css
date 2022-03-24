@@ -11816,3 +11816,22 @@ body {
   background-color: #000;
   margin-bottom: 0%;
 }
+
+.titulo-comentario{
+  font-family: Century Gothic;
+  font-size: 20pt;
+  margin-bottom: 2%;
+  text-decoration: underline;
+}
+
+.texto-comentario{
+  font-family: Century Gothic;
+  font-size: 14pt;
+  margin-bottom: 1%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.data-comentario{
+  font-size:12pt;
+}
