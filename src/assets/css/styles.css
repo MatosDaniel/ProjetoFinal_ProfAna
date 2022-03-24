@@ -11816,3 +11816,18 @@ body {
   background-color: #000;
   margin-bottom: 0%;
 }
+
+.titulo-comentario{
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 25pt;
+  margin-bottom: 2%;
+  text-decoration: underline;
+}
+
+.texto-comentario{
+  
+}
+
+.data-comentario{
+  
+}

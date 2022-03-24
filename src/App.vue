@@ -9,6 +9,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><router-link to="/reviews" class="nav-link">Reviews</router-link></li>
                         <li class="nav-item"><router-link to="/SignUp" class="nav-link">Registo</router-link></li>
                         <li class="nav-item"><router-link to="/Login" class="nav-link">Login</router-link></li>
                     </ul>

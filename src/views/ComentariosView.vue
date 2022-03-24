@@ -12,9 +12,11 @@
         </section>
         <section class="text-center comentarios">
                 <div v-for="(item, id) in comentarios" :key="id" class="align-items-center justify-content-center" style="color: white">
-                    <div> {{item.titulo}}</div>
-                    <div> {{item.texto}}</div>
-                    <div> {{item.data}}</div>
+                    <div class="titulo-comentario"> {{item.titulo}}</div>
+                    <div class="texto-comentario"> {{item.texto}}</div>
+                    <div class="data-comentario"> {{item.data}}</div>
+                    <div>___________________________________________</div>
+                    <br>
                 </div>
         </section>
     </body>
